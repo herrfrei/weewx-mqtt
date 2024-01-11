@@ -23,7 +23,7 @@ def loader():
 
 
 class MqttInstaller(ExtensionInstaller):
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__(
             version="0.2.0",
             name='MQTT',
@@ -39,7 +39,7 @@ class MqttInstaller(ExtensionInstaller):
             ],
         )
 
-    def configure(self, engine: ExtensionEngine) -> bool:
+    def configure(self, engine: ExtensionEngine):
         config_dict: configobj.ConfigObj = engine.config_dict
         if 'StdRESTful' in config_dict and 'MQTT' in config_dict['StdRESTful']:
             return False
