@@ -18,7 +18,7 @@ import configobj
 from weecfg.extension import ExtensionInstaller, ExtensionEngine
 
 
-def loader() -> ExtensionInstaller:
+def loader():
     return MqttInstaller()
 
 
